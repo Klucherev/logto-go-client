@@ -1,0 +1,18 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Logto API references:
+        inputs:
+            - location: https://logto.rentavita.com/api/swagger.json
+        registry:
+            location: registry.speakeasyapi.dev/bizapp/rentavita/logto-api-references
+targets:
+    logto:
+        target: go
+        source: Logto API references
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/bizapp/rentavita/logto-api-references-go-code-samples
+            labelOverride:
+                fixedValue: Go (SDK)
+            blocking: false
