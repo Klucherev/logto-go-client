@@ -5,8 +5,10 @@ management:
   docVersion: Cloud
   speakeasyVersion: 1.551.0
   generationVersion: 2.610.0
-  releaseVersion: 0.0.2
-  configChecksum: ff79a937283a102b8e2525abba508bc0
+  releaseVersion: 0.0.3
+  configChecksum: ef8b523c1fdf1705f03807d2557748a0
+  repoURL: https://github.com/Klucherev/logto-go-client.git
+  installationURL: https://github.com/Klucherev/logto-go-client
 features:
   go:
     acceptHeaders: 2.81.2
