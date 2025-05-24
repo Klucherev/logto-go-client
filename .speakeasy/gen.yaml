@@ -39,5 +39,5 @@ go:
   maxMethodParams: 4
   methodArguments: require-security-and-request
   outputModelSuffix: output
-  packageName: github.com/klucherev/logto
+  packageName: github.com/klucherev/logto-go-client
   responseFormat: envelope-http
