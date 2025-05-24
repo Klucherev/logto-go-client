@@ -43,7 +43,7 @@ Logto API references: API references for Logto services.
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/klucherev/logto-go-client
+go get github.com/Klucherev/logto-go-client
 ```
 <!-- End SDK Installation [installation] -->
 
