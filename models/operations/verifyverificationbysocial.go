@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // VerifyVerificationBySocialConnectorData - A json object constructed from the url query params returned by the social platform. Typically it contains `code`, `state` and `redirectUri` fields.

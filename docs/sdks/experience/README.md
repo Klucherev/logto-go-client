@@ -45,15 +45,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.InitInteraction(ctx, operations.InitInteractionRequest{
         InteractionEvent: operations.InitInteractionInteractionEventForgotPassword,
@@ -96,15 +96,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.UpdateInteractionEvent(ctx, operations.UpdateInteractionEventRequest{
         InteractionEvent: operations.UpdateInteractionEventInteractionEventForgotPassword,
@@ -147,15 +147,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.IdentifyUser(ctx, operations.IdentifyUserRequest{})
     if err != nil {
@@ -196,14 +196,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.SubmitInteraction(ctx)
     if err != nil {
@@ -243,15 +243,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreatePasswordVerification(ctx, operations.CreatePasswordVerificationRequest{
         Identifier: operations.CreatePasswordVerificationIdentifier{
@@ -298,15 +298,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreateAndSendVerificationCode(ctx, operations.CreateAndSendVerificationCodeRequest{
         Identifier: operations.CreateAndSendVerificationCodeIdentifier{
@@ -353,15 +353,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifyVerificationCodeVerification(ctx, operations.VerifyVerificationCodeVerificationRequest{
         Identifier: operations.VerifyVerificationCodeVerificationIdentifier{
@@ -409,15 +409,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreateSocialVerification(ctx, "<id>", operations.CreateSocialVerificationRequestBody{
         State: "Pennsylvania",
@@ -462,15 +462,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifySocialVerification(ctx, "<id>", operations.VerifySocialVerificationRequestBody{
         ConnectorData: operations.VerifySocialVerificationConnectorData{},
@@ -514,15 +514,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreateEnterpriseSsoVerification(ctx, "<id>", operations.CreateEnterpriseSsoVerificationRequestBody{
         State: "Montana",
@@ -567,15 +567,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifyEnterpriseSsoVerification(ctx, "<id>", operations.VerifyEnterpriseSsoVerificationRequestBody{
         ConnectorData: operations.VerifyEnterpriseSsoVerificationConnectorData{},
@@ -620,14 +620,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreateTotpSecret(ctx)
     if err != nil {
@@ -667,15 +667,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifyTotpVerification(ctx, operations.VerifyTotpVerificationRequest{
         Code: "<value>",
@@ -718,14 +718,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreateWebAuthnRegistrationVerification(ctx)
     if err != nil {
@@ -765,15 +765,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifyWebAuthnRegistrationVerification(ctx, operations.VerifyWebAuthnRegistrationVerificationRequest{
         VerificationID: "<id>",
@@ -826,14 +826,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreateWebAuthnAuthenticationVerification(ctx)
     if err != nil {
@@ -873,15 +873,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifyWebAuthnAuthenticationVerification(ctx, operations.VerifyWebAuthnAuthenticationVerificationRequest{
         VerificationID: "<id>",
@@ -935,14 +935,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.GenerateBackupCodes(ctx)
     if err != nil {
@@ -982,15 +982,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifyBackupCode(ctx, operations.VerifyBackupCodeRequest{
         Code: "<value>",
@@ -1033,15 +1033,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.CreateNewPasswordIdentityVerification(ctx, operations.CreateNewPasswordIdentityVerificationRequest{
         Identifier: operations.CreateNewPasswordIdentityVerificationIdentifier{
@@ -1088,15 +1088,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.VerifyOneTimeTokenVerification(ctx, operations.VerifyOneTimeTokenVerificationRequest{
         Identifier: operations.VerifyOneTimeTokenVerificationIdentifier{
@@ -1143,15 +1143,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.AddUserProfile(ctx, operations.CreateAddUserProfileRequestAddUserProfileRequestBody3(
         operations.AddUserProfileRequestBody3{
@@ -1197,15 +1197,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.ResetUserPassword(ctx, operations.ResetUserPasswordRequest{
         Password: "VdpWl9R0tzVaIQF",
@@ -1248,14 +1248,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.SkipMfaBindingFlow(ctx)
     if err != nil {
@@ -1295,15 +1295,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.BindMfaVerification(ctx, operations.BindMfaVerificationRequest{
         Type: operations.BindMfaVerificationTypeWebAuthn,
@@ -1347,14 +1347,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Experience.GetEnabledSsoConnectors(ctx, "Aida.Mertz43@gmail.com")
     if err != nil {

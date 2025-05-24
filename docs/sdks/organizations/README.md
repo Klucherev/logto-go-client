@@ -58,19 +58,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -116,18 +116,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -174,18 +174,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -229,19 +229,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -286,18 +286,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -341,19 +341,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -402,19 +402,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -465,18 +465,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -523,18 +523,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -579,19 +579,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -645,18 +645,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -703,19 +703,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -761,19 +761,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -819,18 +819,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -876,18 +876,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -932,19 +932,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -995,19 +995,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1054,18 +1054,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1112,18 +1112,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1168,19 +1168,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1228,18 +1228,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1286,19 +1286,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1349,19 +1349,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1409,18 +1409,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1466,18 +1466,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1523,19 +1523,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1582,19 +1582,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1645,18 +1645,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1701,18 +1701,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1758,19 +1758,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1817,19 +1817,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1878,18 +1878,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1934,18 +1934,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -1991,19 +1991,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -2050,19 +2050,19 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 
@@ -2112,18 +2112,18 @@ package main
 import(
 	"context"
 	"os"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto"
+	"github.com/klucherev/logto-go-client/models/components"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New(
-        logto.WithSecurity(components.Security{
-            ClientID: logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-            ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+    s := logtogoclient.New(
+        logtogoclient.WithSecurity(components.Security{
+            ClientID: logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+            ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
         }),
     )
 

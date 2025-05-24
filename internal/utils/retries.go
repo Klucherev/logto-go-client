@@ -6,7 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/klucherev/logto/retry"
+	"github.com/klucherev/logto-go-client/retry"
 	"math"
 	"math/rand"
 	"net/http"

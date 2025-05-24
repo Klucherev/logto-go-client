@@ -5,7 +5,7 @@ package operations
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // UpdateSamlApplicationCustomDataRequest - Custom data for the application.

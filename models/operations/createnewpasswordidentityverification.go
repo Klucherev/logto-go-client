@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // CreateNewPasswordIdentityVerificationIdentifier - The unique user identifier.  <br/> Currently, only `username` is accepted. For `email` or `phone` registration, a `CodeVerification` record must be created and used to verify the user's email or phone number identifier.

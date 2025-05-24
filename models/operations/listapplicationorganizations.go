@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/internal/utils"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/internal/utils"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 type ListApplicationOrganizationsRequest struct {

@@ -43,7 +43,7 @@ Logto API references: API references for Logto services.
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/klucherev/logto
+go get github.com/klucherev/logto-go-client
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -57,9 +57,9 @@ package main
 
 import (
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/components"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 	"os"
 )
@@ -67,10 +67,10 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := logto.New(
-		logto.WithSecurity(components.Security{
-			ClientID:     logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-			ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+	s := logtogoclient.New(
+		logtogoclient.WithSecurity(components.Security{
+			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
 		}),
 	)
 
@@ -103,9 +103,9 @@ package main
 
 import (
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/components"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 	"os"
 )
@@ -113,10 +113,10 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := logto.New(
-		logto.WithSecurity(components.Security{
-			ClientID:     logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-			ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+	s := logtogoclient.New(
+		logtogoclient.WithSecurity(components.Security{
+			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
 		}),
 	)
 
@@ -571,10 +571,10 @@ package main
 
 import (
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto/models/operations"
-	"github.com/klucherev/logto/retry"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/components"
+	"github.com/klucherev/logto-go-client/models/operations"
+	"github.com/klucherev/logto-go-client/retry"
 	"log"
 	"models/operations"
 	"os"
@@ -583,10 +583,10 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := logto.New(
-		logto.WithSecurity(components.Security{
-			ClientID:     logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-			ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+	s := logtogoclient.New(
+		logtogoclient.WithSecurity(components.Security{
+			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
 		}),
 	)
 
@@ -617,10 +617,10 @@ package main
 
 import (
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto/models/operations"
-	"github.com/klucherev/logto/retry"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/components"
+	"github.com/klucherev/logto-go-client/models/operations"
+	"github.com/klucherev/logto-go-client/retry"
 	"log"
 	"os"
 )
@@ -628,8 +628,8 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := logto.New(
-		logto.WithRetryConfig(
+	s := logtogoclient.New(
+		logtogoclient.WithRetryConfig(
 			retry.Config{
 				Strategy: "backoff",
 				Backoff: &retry.BackoffStrategy{
@@ -640,9 +640,9 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
-		logto.WithSecurity(components.Security{
-			ClientID:     logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-			ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+		logtogoclient.WithSecurity(components.Security{
+			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
 		}),
 	)
 
@@ -679,10 +679,10 @@ package main
 import (
 	"context"
 	"errors"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/apierrors"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/apierrors"
+	"github.com/klucherev/logto-go-client/models/components"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 	"os"
 )
@@ -690,10 +690,10 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := logto.New(
-		logto.WithSecurity(components.Security{
-			ClientID:     logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-			ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+	s := logtogoclient.New(
+		logtogoclient.WithSecurity(components.Security{
+			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
 		}),
 	)
 
@@ -722,9 +722,9 @@ package main
 
 import (
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/components"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/components"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 	"os"
 )
@@ -732,11 +732,11 @@ import (
 func main() {
 	ctx := context.Background()
 
-	s := logto.New(
-		logto.WithServerURL("https://logto.rentavita.com"),
-		logto.WithSecurity(components.Security{
-			ClientID:     logto.String(os.Getenv("LOGTO_CLIENT_ID")),
-			ClientSecret: logto.String(os.Getenv("LOGTO_CLIENT_SECRET")),
+	s := logtogoclient.New(
+		logtogoclient.WithServerURL("https://logto.rentavita.com"),
+		logtogoclient.WithSecurity(components.Security{
+			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
+			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),
 		}),
 	)
 

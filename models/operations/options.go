@@ -4,8 +4,8 @@ package operations
 
 import (
 	"errors"
-	"github.com/klucherev/logto/internal/utils"
-	"github.com/klucherev/logto/retry"
+	"github.com/klucherev/logto-go-client/internal/utils"
+	"github.com/klucherev/logto-go-client/retry"
 	"time"
 )
 

@@ -5,7 +5,7 @@ package operations
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // ReplaceOneTimeTokenStatusStatusRequest - The new status of the one-time token.

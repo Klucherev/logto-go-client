@@ -1,4 +1,4 @@
-module github.com/klucherev/logto
+module github.com/klucherev/logto-go-client
 
 go 1.20
 

@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // VerifyEnterpriseSsoVerificationConnectorData - Arbitrary data returned by the SSO provider to complete the verification process.

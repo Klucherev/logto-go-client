@@ -22,14 +22,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Authn.GetHasuraAuth(ctx, "<value>", nil)
     if err != nil {
@@ -75,15 +75,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Authn.AssertSaml(ctx, "<id>", operations.AssertSamlRequestBody{})
     if err != nil {
@@ -127,15 +127,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Authn.AssertSingleSignOnSaml(ctx, "<id>", operations.AssertSingleSignOnSamlRequestBody{
         SAMLResponse: "<value>",

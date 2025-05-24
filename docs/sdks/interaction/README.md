@@ -39,15 +39,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PutAPIInteraction(ctx, operations.PutAPIInteractionRequest{
         Event: operations.PutAPIInteractionEventRegister,
@@ -88,14 +88,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.DeleteAPIInteraction(ctx)
     if err != nil {
@@ -133,15 +133,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PutAPIInteractionEvent(ctx, operations.PutAPIInteractionEventRequest{
         Event: operations.PutAPIInteractionEventEventRegister,
@@ -182,15 +182,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PatchAPIInteractionIdentifiers(ctx, operations.CreatePatchAPIInteractionIdentifiersRequestPatchAPIInteractionIdentifiersRequestBody7(
         operations.PatchAPIInteractionIdentifiersRequestBody7{
@@ -234,15 +234,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PutAPIInteractionProfile(ctx, operations.PutAPIInteractionProfileRequest{})
     if err != nil {
@@ -281,15 +281,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PatchAPIInteractionProfile(ctx, operations.PatchAPIInteractionProfileRequest{})
     if err != nil {
@@ -328,14 +328,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.DeleteAPIInteractionProfile(ctx)
     if err != nil {
@@ -373,14 +373,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionSubmit(ctx)
     if err != nil {
@@ -418,15 +418,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionConsent(ctx, operations.PostAPIInteractionConsentRequest{})
     if err != nil {
@@ -465,14 +465,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.GetAPIInteractionConsent(ctx)
     if err != nil {
@@ -510,15 +510,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionVerificationSocialAuthorizationURI(ctx, operations.PostAPIInteractionVerificationSocialAuthorizationURIRequest{
         ConnectorID: "<id>",
@@ -561,15 +561,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionVerificationVerificationCode(ctx, operations.CreatePostAPIInteractionVerificationVerificationCodeRequestPostAPIInteractionVerificationVerificationCodeRequestBody1(
         operations.PostAPIInteractionVerificationVerificationCodeRequestBody1{
@@ -612,14 +612,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionVerificationTotp(ctx)
     if err != nil {
@@ -657,14 +657,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionVerificationWebauthnRegistration(ctx)
     if err != nil {
@@ -702,14 +702,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionVerificationWebauthnAuthentication(ctx)
     if err != nil {
@@ -747,15 +747,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionBindMfa(ctx, operations.CreatePostAPIInteractionBindMfaRequestPostAPIInteractionBindMfaRequestBody1(
         operations.PostAPIInteractionBindMfaRequestBody1{
@@ -799,15 +799,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PutAPIInteractionMfa(ctx, operations.CreatePutAPIInteractionMfaRequestPutAPIInteractionMfaRequestBody2(
         operations.PutAPIInteractionMfaRequestBody2{
@@ -858,15 +858,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PutAPIInteractionMfaSkipped(ctx, operations.PutAPIInteractionMfaSkippedRequest{
         MfaSkipped: true,
@@ -907,15 +907,15 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
-	"github.com/klucherev/logto/models/operations"
+	logtogoclient "github.com/klucherev/logto-go-client"
+	"github.com/klucherev/logto-go-client/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionSingleSignOnConnectorIDAuthorizationURL(ctx, "<id>", operations.PostAPIInteractionSingleSignOnConnectorIDAuthorizationURLRequestBody{
         State: "Georgia",
@@ -958,14 +958,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionSingleSignOnConnectorIDAuthentication(ctx, "<id>", map[string]any{
 
@@ -1007,14 +1007,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.PostAPIInteractionSingleSignOnConnectorIDRegistration(ctx, "<id>")
     if err != nil {
@@ -1053,14 +1053,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Interaction.GetAPIInteractionSingleSignOnConnectors(ctx, "Olaf_Metz@gmail.com")
     if err != nil {

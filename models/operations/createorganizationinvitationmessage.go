@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // CreateOrganizationInvitationMessageRequestBody - The message payload for the "OrganizationInvitation" template to use when sending the invitation via email.

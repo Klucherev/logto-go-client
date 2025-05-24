@@ -5,7 +5,7 @@ package operations
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // AddOneTimeTokensContextRequest - Additional context to store with the one-time token. This can be used to store arbitrary data that will be associated with the token.

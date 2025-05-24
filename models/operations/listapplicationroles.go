@@ -5,8 +5,8 @@ package operations
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/klucherev/logto/internal/utils"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/internal/utils"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 type ListApplicationRolesRequest struct {

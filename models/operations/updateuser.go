@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // UsersUpdateUserCustomDataRequest - Custom data object to update for the given user ID. Note this will replace the entire custom data object.

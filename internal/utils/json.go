@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/klucherev/logto/types"
+	"github.com/klucherev/logto-go-client/types"
 
 	"github.com/ericlagergren/decimal"
 )

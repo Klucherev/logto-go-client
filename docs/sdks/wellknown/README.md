@@ -24,14 +24,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.WellKnown.GetWellKnownEndpoint(ctx, "<id>")
     if err != nil {
@@ -74,14 +74,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.WellKnown.GetSignInExperienceConfig(ctx, nil, nil)
     if err != nil {
@@ -123,14 +123,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.WellKnown.GetSignInExperiencePhrases(ctx, nil)
     if err != nil {
@@ -171,14 +171,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.WellKnown.GetWellKnownExperience(ctx, nil, nil)
     if err != nil {
@@ -220,14 +220,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.WellKnown.GetWellKnownManagementOpenapiJSON(ctx)
     if err != nil {
@@ -267,14 +267,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.WellKnown.GetWellKnownExperienceOpenapiJSON(ctx)
     if err != nil {
@@ -314,14 +314,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.WellKnown.GetWellKnownUserOpenapiJSON(ctx)
     if err != nil {

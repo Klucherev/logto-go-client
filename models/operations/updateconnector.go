@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/klucherev/logto/internal/utils"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/internal/utils"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // UpdateConnectorConfigRequest - The connector config object that will be passed to the connector. The config object should be compatible with the connector factory.

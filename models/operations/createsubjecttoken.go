@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // CreateSubjectTokenContext - The additional context to be included in the token, this can be used in custom JWT.

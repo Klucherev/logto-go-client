@@ -23,14 +23,14 @@ package main
 
 import(
 	"context"
-	"github.com/klucherev/logto"
+	logtogoclient "github.com/klucherev/logto-go-client"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := logto.New()
+    s := logtogoclient.New()
 
     res, err := s.Status.GetStatus(ctx)
     if err != nil {

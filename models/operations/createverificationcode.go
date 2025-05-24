@@ -5,8 +5,8 @@ package operations
 import (
 	"errors"
 	"fmt"
-	"github.com/klucherev/logto/internal/utils"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/internal/utils"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 type CreateVerificationCodeRequestBody2 struct {

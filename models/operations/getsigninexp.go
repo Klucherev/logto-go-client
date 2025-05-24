@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/klucherev/logto/internal/utils"
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/internal/utils"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // GetSignInExpColor - The primary branding color for the sign-in page (both light/dark mode).

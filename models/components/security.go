@@ -3,7 +3,7 @@
 package components
 
 import (
-	"github.com/klucherev/logto/internal/utils"
+	"github.com/klucherev/logto-go-client/internal/utils"
 )
 
 type Security struct {

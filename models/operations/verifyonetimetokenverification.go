@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"github.com/klucherev/logto/models/components"
+	"github.com/klucherev/logto-go-client/models/components"
 )
 
 // VerifyOneTimeTokenVerificationIdentifier - The unique user identifier.  <br/> Currently, only `email` is accepted.
