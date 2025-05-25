@@ -59,7 +59,7 @@ func (s *SSOConnectorProviders) ListSsoConnectorProviders(ctx context.Context, o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListSsoConnectorProviders",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

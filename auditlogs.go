@@ -57,7 +57,7 @@ func (s *AuditLogs) ListLogs(ctx context.Context, request operations.ListLogsReq
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListLogs",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -273,7 +273,7 @@ func (s *AuditLogs) GetLog(ctx context.Context, id string, opts ...operations.Op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetLog",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

@@ -57,7 +57,7 @@ func (s *SAMLApplications) CreateSamlApplication(ctx context.Context, request op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateSamlApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -278,7 +278,7 @@ func (s *SAMLApplications) GetSamlApplication(ctx context.Context, id string, op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSamlApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -495,7 +495,7 @@ func (s *SAMLApplications) UpdateSamlApplication(ctx context.Context, id string,
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateSamlApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -718,7 +718,7 @@ func (s *SAMLApplications) DeleteSamlApplication(ctx context.Context, id string,
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteSamlApplication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -915,7 +915,7 @@ func (s *SAMLApplications) CreateSamlApplicationSecret(ctx context.Context, id s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateSamlApplicationSecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1136,7 +1136,7 @@ func (s *SAMLApplications) ListSamlApplicationSecrets(ctx context.Context, id st
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListSamlApplicationSecrets",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1351,7 +1351,7 @@ func (s *SAMLApplications) DeleteSamlApplicationSecret(ctx context.Context, id s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteSamlApplicationSecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1547,7 +1547,7 @@ func (s *SAMLApplications) UpdateSamlApplicationSecret(ctx context.Context, id s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateSamlApplicationSecret",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1769,7 +1769,7 @@ func (s *SAMLApplications) ListSamlApplicationMetadata(ctx context.Context, id s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListSamlApplicationMetadata",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1988,7 +1988,7 @@ func (s *SAMLApplications) GetSamlApplicationCallback(ctx context.Context, reque
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSamlApplicationCallback",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

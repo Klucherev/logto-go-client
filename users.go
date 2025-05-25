@@ -62,7 +62,7 @@ func (s *Users) GetUser(ctx context.Context, userID string, includeSsoIdentities
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetUser",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -281,7 +281,7 @@ func (s *Users) UpdateUser(ctx context.Context, userID string, requestBody opera
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateUser",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -504,7 +504,7 @@ func (s *Users) DeleteUser(ctx context.Context, userID string, opts ...operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteUser",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -698,7 +698,7 @@ func (s *Users) ListUserCustomData(ctx context.Context, userID string, opts ...o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListUserCustomData",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -911,7 +911,7 @@ func (s *Users) UpdateUserCustomData(ctx context.Context, userID string, request
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateUserCustomData",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1133,7 +1133,7 @@ func (s *Users) UpdateUserProfile(ctx context.Context, userID string, requestBod
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateUserProfile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1350,7 +1350,7 @@ func (s *Users) CreateUser(ctx context.Context, request operations.CreateUserReq
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateUser",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1577,7 +1577,7 @@ func (s *Users) ListUsers(ctx context.Context, page *int64, pageSize *int64, sea
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListUsers",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1794,7 +1794,7 @@ func (s *Users) UpdateUserPassword(ctx context.Context, userID string, requestBo
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateUserPassword",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2016,7 +2016,7 @@ func (s *Users) VerifyUserPassword(ctx context.Context, userID string, requestBo
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyUserPassword",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2219,7 +2219,7 @@ func (s *Users) GetUserHasPassword(ctx context.Context, userID string, opts ...o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetUserHasPassword",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2434,7 +2434,7 @@ func (s *Users) UpdateUserIsSuspended(ctx context.Context, userID string, reques
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateUserIsSuspended",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2658,7 +2658,7 @@ func (s *Users) ListUserRoles(ctx context.Context, userID string, page *int64, p
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListUserRoles",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2877,7 +2877,7 @@ func (s *Users) AssignUserRoles(ctx context.Context, userID string, requestBody 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AssignUserRoles",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -3081,7 +3081,7 @@ func (s *Users) ReplaceUserRoles(ctx context.Context, userID string, requestBody
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceUserRoles",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -3285,7 +3285,7 @@ func (s *Users) DeleteUserRole(ctx context.Context, userID string, roleID string
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteUserRole",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -3481,7 +3481,7 @@ func (s *Users) ReplaceUserIdentity(ctx context.Context, userID string, target s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceUserIdentity",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -3726,7 +3726,7 @@ func (s *Users) DeleteUserIdentity(ctx context.Context, userID string, target st
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteUserIdentity",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -3945,7 +3945,7 @@ func (s *Users) CreateUserIdentity(ctx context.Context, userID string, requestBo
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateUserIdentity",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -4168,7 +4168,7 @@ func (s *Users) ListUserOrganizations(ctx context.Context, userID string, opts .
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListUserOrganizations",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -4382,7 +4382,7 @@ func (s *Users) ListUserMfaVerifications(ctx context.Context, userID string, opt
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListUserMfaVerifications",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -4597,7 +4597,7 @@ func (s *Users) CreateUserMfaVerification(ctx context.Context, userID string, re
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateUserMfaVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -4821,7 +4821,7 @@ func (s *Users) DeleteUserMfaVerification(ctx context.Context, userID string, ve
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteUserMfaVerification",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -5015,7 +5015,7 @@ func (s *Users) ListUserPersonalAccessTokens(ctx context.Context, userID string,
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListUserPersonalAccessTokens",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -5230,7 +5230,7 @@ func (s *Users) CreateUserPersonalAccessToken(ctx context.Context, userID string
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateUserPersonalAccessToken",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -5452,7 +5452,7 @@ func (s *Users) DeleteUserPersonalAccessToken(ctx context.Context, userID string
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteUserPersonalAccessToken",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -5648,7 +5648,7 @@ func (s *Users) UpdateUserPersonalAccessToken(ctx context.Context, userID string
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateUserPersonalAccessToken",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

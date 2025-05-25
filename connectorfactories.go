@@ -57,7 +57,7 @@ func (s *ConnectorFactories) ListConnectorFactories(ctx context.Context, opts ..
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListConnectorFactories",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -267,7 +267,7 @@ func (s *ConnectorFactories) GetConnectorFactory(ctx context.Context, id string,
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetConnectorFactory",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

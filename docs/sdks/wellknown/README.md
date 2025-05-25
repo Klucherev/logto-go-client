@@ -7,59 +7,12 @@ Well-Known routes provide information and resources that can be discovered by cl
 
 ### Available Operations
 
-* [GetWellKnownEndpoint](#getwellknownendpoint)
 * [~~GetSignInExperienceConfig~~](#getsigninexperienceconfig) - Get full sign-in experience :warning: **Deprecated**
 * [GetSignInExperiencePhrases](#getsigninexperiencephrases) - Get localized phrases
 * [GetWellKnownExperience](#getwellknownexperience) - Get full sign-in experience
 * [GetWellKnownManagementOpenapiJSON](#getwellknownmanagementopenapijson) - Get Management API swagger JSON
 * [GetWellKnownExperienceOpenapiJSON](#getwellknownexperienceopenapijson) - Get Experience API swagger JSON
 * [GetWellKnownUserOpenapiJSON](#getwellknownuseropenapijson) - Get User API swagger JSON
-
-## GetWellKnownEndpoint
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"context"
-	logtogoclient "github.com/klucherev/logto-go-client"
-	"log"
-)
-
-func main() {
-    ctx := context.Background()
-
-    s := logtogoclient.New()
-
-    res, err := s.WellKnown.GetWellKnownEndpoint(ctx, "<id>")
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.Object != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `tenantID`                                               | *string*                                                 | :heavy_check_mark:                                       | The unique identifier of the tenant.                     |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.GetWellKnownEndpointResponse](../../models/operations/getwellknownendpointresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| apierrors.APIError | 4XX, 5XX           | \*/\*              |
 
 ## ~~GetSignInExperienceConfig~~
 

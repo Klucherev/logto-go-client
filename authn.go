@@ -62,7 +62,7 @@ func (s *Authn) GetHasuraAuth(ctx context.Context, resource string, unauthorized
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetHasuraAuth",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -277,7 +277,7 @@ func (s *Authn) AssertSaml(ctx context.Context, connectorID string, requestBody 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AssertSaml",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -473,7 +473,7 @@ func (s *Authn) AssertSingleSignOnSaml(ctx context.Context, connectorID string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AssertSingleSignOnSaml",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

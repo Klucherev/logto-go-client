@@ -56,7 +56,7 @@ func (s *SentinelActivities) DeleteSentinelActivities(ctx context.Context, reque
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteSentinelActivities",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

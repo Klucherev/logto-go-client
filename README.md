@@ -18,6 +18,8 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *github.c
 ## Summary
 
 Logto API references: API references for Logto services.
+
+Note: The documentation is for Logto Cloud. If you are using Logto OSS, please refer to the response of `/api/swagger.json` endpoint on your Logto instance.
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -549,7 +551,6 @@ func main() {
 
 ### [WellKnown](docs/sdks/wellknown/README.md)
 
-* [GetWellKnownEndpoint](docs/sdks/wellknown/README.md#getwellknownendpoint)
 * [~~GetSignInExperienceConfig~~](docs/sdks/wellknown/README.md#getsigninexperienceconfig) - Get full sign-in experience :warning: **Deprecated**
 * [GetSignInExperiencePhrases](docs/sdks/wellknown/README.md#getsigninexperiencephrases) - Get localized phrases
 * [GetWellKnownExperience](docs/sdks/wellknown/README.md#getwellknownexperience) - Get full sign-in experience
@@ -733,7 +734,7 @@ func main() {
 	ctx := context.Background()
 
 	s := logtogoclient.New(
-		logtogoclient.WithServerURL("https://logto.rentavita.com"),
+		logtogoclient.WithServerURL("https://[tenant_id].logto.app/"),
 		logtogoclient.WithSecurity(components.Security{
 			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
 			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),

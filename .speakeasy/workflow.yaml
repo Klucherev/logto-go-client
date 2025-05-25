@@ -3,7 +3,7 @@ speakeasyVersion: latest
 sources:
     Logto API references:
         inputs:
-            - location: https://logto.rentavita.com/api/swagger.json
+            - location: ./schema.yaml
         registry:
             location: registry.speakeasyapi.dev/bizapp/rentavita/logto-api-references
 targets:

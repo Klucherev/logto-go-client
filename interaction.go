@@ -55,7 +55,7 @@ func (s *Interaction) PutAPIInteraction(ctx context.Context, request operations.
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "put_/api/interaction",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -246,7 +246,7 @@ func (s *Interaction) DeleteAPIInteraction(ctx context.Context, opts ...operatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "delete_/api/interaction",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -424,7 +424,7 @@ func (s *Interaction) PutAPIInteractionEvent(ctx context.Context, request operat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "put_/api/interaction/event",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -613,7 +613,7 @@ func (s *Interaction) PatchAPIInteractionIdentifiers(ctx context.Context, reques
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "patch_/api/interaction/identifiers",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -804,7 +804,7 @@ func (s *Interaction) PutAPIInteractionProfile(ctx context.Context, request oper
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "put_/api/interaction/profile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -993,7 +993,7 @@ func (s *Interaction) PatchAPIInteractionProfile(ctx context.Context, request op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "patch_/api/interaction/profile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1180,7 +1180,7 @@ func (s *Interaction) DeleteAPIInteractionProfile(ctx context.Context, opts ...o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "delete_/api/interaction/profile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -1360,7 +1360,7 @@ func (s *Interaction) PostAPIInteractionSubmit(ctx context.Context, opts ...oper
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/submit",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -1567,7 +1567,7 @@ func (s *Interaction) PostAPIInteractionConsent(ctx context.Context, request ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/consent",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1752,7 +1752,7 @@ func (s *Interaction) GetAPIInteractionConsent(ctx context.Context, opts ...oper
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "get_/api/interaction/consent",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -1948,7 +1948,7 @@ func (s *Interaction) PostAPIInteractionVerificationSocialAuthorizationURI(ctx c
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/verification/social-authorization-uri",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2155,7 +2155,7 @@ func (s *Interaction) PostAPIInteractionVerificationVerificationCode(ctx context
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/verification/verification-code",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -2344,7 +2344,7 @@ func (s *Interaction) PostAPIInteractionVerificationTotp(ctx context.Context, op
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/verification/totp",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -2540,7 +2540,7 @@ func (s *Interaction) PostAPIInteractionVerificationWebauthnRegistration(ctx con
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/verification/webauthn-registration",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -2736,7 +2736,7 @@ func (s *Interaction) PostAPIInteractionVerificationWebauthnAuthentication(ctx c
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/verification/webauthn-authentication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -2934,7 +2934,7 @@ func (s *Interaction) PostAPIInteractionBindMfa(ctx context.Context, request ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/bind-mfa",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -3125,7 +3125,7 @@ func (s *Interaction) PutAPIInteractionMfa(ctx context.Context, request operatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "put_/api/interaction/mfa",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -3312,7 +3312,7 @@ func (s *Interaction) PutAPIInteractionMfaSkipped(ctx context.Context, request o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "put_/api/interaction/mfa-skipped",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -3504,7 +3504,7 @@ func (s *Interaction) PostAPIInteractionSingleSignOnConnectorIDAuthorizationURL(
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/single-sign-on/{connectorId}/authorization-url",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -3718,7 +3718,7 @@ func (s *Interaction) PostAPIInteractionSingleSignOnConnectorIDAuthentication(ct
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/single-sign-on/{connectorId}/authentication",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -3933,7 +3933,7 @@ func (s *Interaction) PostAPIInteractionSingleSignOnConnectorIDRegistration(ctx 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "post_/api/interaction/single-sign-on/{connectorId}/registration",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 
@@ -4141,7 +4141,7 @@ func (s *Interaction) GetAPIInteractionSingleSignOnConnectors(ctx context.Contex
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "get_/api/interaction/single-sign-on/connectors",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: nil,
 	}
 

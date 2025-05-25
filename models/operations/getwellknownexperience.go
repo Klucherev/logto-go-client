@@ -1147,6 +1147,33 @@ func (o *GetWellKnownExperienceSentinelPolicy) GetLockoutDuration() *float64 {
 	return o.LockoutDuration
 }
 
+type GetWellKnownExperienceEmailBlocklistPolicy struct {
+	BlockDisposableAddresses *bool    `json:"blockDisposableAddresses,omitempty"`
+	BlockSubaddressing       *bool    `json:"blockSubaddressing,omitempty"`
+	CustomBlocklist          []string `json:"customBlocklist,omitempty"`
+}
+
+func (o *GetWellKnownExperienceEmailBlocklistPolicy) GetBlockDisposableAddresses() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.BlockDisposableAddresses
+}
+
+func (o *GetWellKnownExperienceEmailBlocklistPolicy) GetBlockSubaddressing() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.BlockSubaddressing
+}
+
+func (o *GetWellKnownExperienceEmailBlocklistPolicy) GetCustomBlocklist() []string {
+	if o == nil {
+		return nil
+	}
+	return o.CustomBlocklist
+}
+
 // GetWellKnownExperienceName - Validator function
 type GetWellKnownExperienceName struct {
 }
@@ -1400,36 +1427,37 @@ func (o *GetWellKnownExperienceCaptchaConfig) GetSiteKey() string {
 
 // GetWellKnownExperienceResponseBody - The full sign-in experience configuration.
 type GetWellKnownExperienceResponseBody struct {
-	TenantID                     string                                   `json:"tenantId"`
-	ID                           string                                   `json:"id"`
-	Color                        GetWellKnownExperienceColor              `json:"color"`
-	Branding                     GetWellKnownExperienceBranding           `json:"branding"`
-	LanguageInfo                 GetWellKnownExperienceLanguageInfo       `json:"languageInfo"`
-	TermsOfUseURL                *string                                  `json:"termsOfUseUrl"`
-	PrivacyPolicyURL             *string                                  `json:"privacyPolicyUrl"`
-	AgreeToTermsPolicy           GetWellKnownExperienceAgreeToTermsPolicy `json:"agreeToTermsPolicy"`
-	SignIn                       GetWellKnownExperienceSignIn             `json:"signIn"`
-	SignUp                       GetWellKnownExperienceSignUp             `json:"signUp"`
-	SocialSignIn                 GetWellKnownExperienceSocialSignIn       `json:"socialSignIn"`
-	SocialSignInConnectorTargets []string                                 `json:"socialSignInConnectorTargets"`
-	SignInMode                   GetWellKnownExperienceSignInMode         `json:"signInMode"`
-	CustomCSS                    *string                                  `json:"customCss"`
-	CustomContent                map[string]string                        `json:"customContent"`
-	CustomUIAssets               *GetWellKnownExperienceCustomUIAssets    `json:"customUiAssets"`
-	PasswordPolicy               GetWellKnownExperiencePasswordPolicy     `json:"passwordPolicy"`
-	Mfa                          GetWellKnownExperienceMfa                `json:"mfa"`
-	SingleSignOnEnabled          bool                                     `json:"singleSignOnEnabled"`
-	SupportEmail                 *string                                  `json:"supportEmail"`
-	SupportWebsiteURL            *string                                  `json:"supportWebsiteUrl"`
-	UnknownSessionRedirectURL    *string                                  `json:"unknownSessionRedirectUrl"`
-	CaptchaPolicy                GetWellKnownExperienceCaptchaPolicy      `json:"captchaPolicy"`
-	SentinelPolicy               GetWellKnownExperienceSentinelPolicy     `json:"sentinelPolicy"`
-	SocialConnectors             []GetWellKnownExperienceSocialConnector  `json:"socialConnectors"`
-	SsoConnectors                []GetWellKnownExperienceSsoConnector     `json:"ssoConnectors"`
-	ForgotPassword               GetWellKnownExperienceForgotPassword     `json:"forgotPassword"`
-	IsDevelopmentTenant          bool                                     `json:"isDevelopmentTenant"`
-	GoogleOneTap                 *GetWellKnownExperienceGoogleOneTap      `json:"googleOneTap,omitempty"`
-	CaptchaConfig                *GetWellKnownExperienceCaptchaConfig     `json:"captchaConfig,omitempty"`
+	TenantID                     string                                     `json:"tenantId"`
+	ID                           string                                     `json:"id"`
+	Color                        GetWellKnownExperienceColor                `json:"color"`
+	Branding                     GetWellKnownExperienceBranding             `json:"branding"`
+	LanguageInfo                 GetWellKnownExperienceLanguageInfo         `json:"languageInfo"`
+	TermsOfUseURL                *string                                    `json:"termsOfUseUrl"`
+	PrivacyPolicyURL             *string                                    `json:"privacyPolicyUrl"`
+	AgreeToTermsPolicy           GetWellKnownExperienceAgreeToTermsPolicy   `json:"agreeToTermsPolicy"`
+	SignIn                       GetWellKnownExperienceSignIn               `json:"signIn"`
+	SignUp                       GetWellKnownExperienceSignUp               `json:"signUp"`
+	SocialSignIn                 GetWellKnownExperienceSocialSignIn         `json:"socialSignIn"`
+	SocialSignInConnectorTargets []string                                   `json:"socialSignInConnectorTargets"`
+	SignInMode                   GetWellKnownExperienceSignInMode           `json:"signInMode"`
+	CustomCSS                    *string                                    `json:"customCss"`
+	CustomContent                map[string]string                          `json:"customContent"`
+	CustomUIAssets               *GetWellKnownExperienceCustomUIAssets      `json:"customUiAssets"`
+	PasswordPolicy               GetWellKnownExperiencePasswordPolicy       `json:"passwordPolicy"`
+	Mfa                          GetWellKnownExperienceMfa                  `json:"mfa"`
+	SingleSignOnEnabled          bool                                       `json:"singleSignOnEnabled"`
+	SupportEmail                 *string                                    `json:"supportEmail"`
+	SupportWebsiteURL            *string                                    `json:"supportWebsiteUrl"`
+	UnknownSessionRedirectURL    *string                                    `json:"unknownSessionRedirectUrl"`
+	CaptchaPolicy                GetWellKnownExperienceCaptchaPolicy        `json:"captchaPolicy"`
+	SentinelPolicy               GetWellKnownExperienceSentinelPolicy       `json:"sentinelPolicy"`
+	EmailBlocklistPolicy         GetWellKnownExperienceEmailBlocklistPolicy `json:"emailBlocklistPolicy"`
+	SocialConnectors             []GetWellKnownExperienceSocialConnector    `json:"socialConnectors"`
+	SsoConnectors                []GetWellKnownExperienceSsoConnector       `json:"ssoConnectors"`
+	ForgotPassword               GetWellKnownExperienceForgotPassword       `json:"forgotPassword"`
+	IsDevelopmentTenant          bool                                       `json:"isDevelopmentTenant"`
+	GoogleOneTap                 *GetWellKnownExperienceGoogleOneTap        `json:"googleOneTap,omitempty"`
+	CaptchaConfig                *GetWellKnownExperienceCaptchaConfig       `json:"captchaConfig,omitempty"`
 }
 
 func (o *GetWellKnownExperienceResponseBody) GetTenantID() string {
@@ -1598,6 +1626,13 @@ func (o *GetWellKnownExperienceResponseBody) GetSentinelPolicy() GetWellKnownExp
 		return GetWellKnownExperienceSentinelPolicy{}
 	}
 	return o.SentinelPolicy
+}
+
+func (o *GetWellKnownExperienceResponseBody) GetEmailBlocklistPolicy() GetWellKnownExperienceEmailBlocklistPolicy {
+	if o == nil {
+		return GetWellKnownExperienceEmailBlocklistPolicy{}
+	}
+	return o.EmailBlocklistPolicy
 }
 
 func (o *GetWellKnownExperienceResponseBody) GetSocialConnectors() []GetWellKnownExperienceSocialConnector {

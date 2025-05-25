@@ -57,7 +57,7 @@ func (s *MyAccount) GetProfile(ctx context.Context, opts ...operations.Option) (
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetProfile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -263,7 +263,7 @@ func (s *MyAccount) UpdateProfile(ctx context.Context, request operations.Update
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateProfile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -480,7 +480,7 @@ func (s *MyAccount) UpdateOtherProfile(ctx context.Context, request operations.U
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateOtherProfile",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -695,7 +695,7 @@ func (s *MyAccount) UpdatePassword(ctx context.Context, request operations.Updat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdatePassword",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -892,7 +892,7 @@ func (s *MyAccount) UpdatePrimaryEmail(ctx context.Context, request operations.U
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdatePrimaryEmail",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1003,7 +1003,7 @@ func (s *MyAccount) UpdatePrimaryEmail(ctx context.Context, request operations.U
 
 			_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 			return nil, err
-		} else if utils.MatchStatusCodes([]string{"400", "401", "403", "4XX", "5XX"}, httpRes.StatusCode) {
+		} else if utils.MatchStatusCodes([]string{"400", "401", "403", "422", "4XX", "5XX"}, httpRes.StatusCode) {
 			_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 			if err != nil {
 				return nil, err
@@ -1032,6 +1032,8 @@ func (s *MyAccount) UpdatePrimaryEmail(ctx context.Context, request operations.U
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 422:
 		fallthrough
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
@@ -1087,7 +1089,7 @@ func (s *MyAccount) DeletePrimaryEmail(ctx context.Context, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeletePrimaryEmail",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1275,7 +1277,7 @@ func (s *MyAccount) UpdatePrimaryPhone(ctx context.Context, request operations.U
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdatePrimaryPhone",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1386,7 +1388,7 @@ func (s *MyAccount) UpdatePrimaryPhone(ctx context.Context, request operations.U
 
 			_, err = s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, nil, err)
 			return nil, err
-		} else if utils.MatchStatusCodes([]string{"400", "401", "403", "4XX", "5XX"}, httpRes.StatusCode) {
+		} else if utils.MatchStatusCodes([]string{"400", "401", "403", "422", "4XX", "5XX"}, httpRes.StatusCode) {
 			_httpRes, err := s.sdkConfiguration.Hooks.AfterError(hooks.AfterErrorContext{HookContext: hookCtx}, httpRes, nil)
 			if err != nil {
 				return nil, err
@@ -1415,6 +1417,8 @@ func (s *MyAccount) UpdatePrimaryPhone(ctx context.Context, request operations.U
 	case httpRes.StatusCode == 401:
 		fallthrough
 	case httpRes.StatusCode == 403:
+		fallthrough
+	case httpRes.StatusCode == 422:
 		fallthrough
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		rawBody, err := utils.ConsumeRawBody(httpRes)
@@ -1470,7 +1474,7 @@ func (s *MyAccount) DeletePrimaryPhone(ctx context.Context, opts ...operations.O
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeletePrimaryPhone",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1658,7 +1662,7 @@ func (s *MyAccount) AddUserIdentities(ctx context.Context, request operations.Ad
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "AddUserIdentities",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1857,7 +1861,7 @@ func (s *MyAccount) DeleteIdentity(ctx context.Context, target string, opts ...o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteIdentity",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

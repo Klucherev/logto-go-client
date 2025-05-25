@@ -60,7 +60,7 @@ func (s *VerificationCodes) CreateVerificationCode(ctx context.Context, request 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateVerificationCode",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -259,7 +259,7 @@ func (s *VerificationCodes) VerifyVerificationCode(ctx context.Context, request 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "VerifyVerificationCode",
-		OAuth2Scopes:   []string{"all"},
+		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

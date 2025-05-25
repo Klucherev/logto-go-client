@@ -1118,6 +1118,7 @@ func (o *CaptchaPolicyRequest) GetEnabled() *bool {
 	return o.Enabled
 }
 
+// SentinelPolicyRequest - Custom sentinel policy settings. Use this field to customize the user lockout policy. The default value is 100 failed attempts within one hour. The user will be locked out for 60 minutes after exceeding the limit.
 type SentinelPolicyRequest struct {
 	MaxAttempts     *float64 `json:"maxAttempts,omitempty"`
 	LockoutDuration *float64 `json:"lockoutDuration,omitempty"`
@@ -1135,6 +1136,45 @@ func (o *SentinelPolicyRequest) GetLockoutDuration() *float64 {
 		return nil
 	}
 	return o.LockoutDuration
+}
+
+// EmailBlocklistPolicyRequest - Define email restriction policies. Users will be prohibited from registering or linking any email addresses that are included in the blocklist.
+type EmailBlocklistPolicyRequest struct {
+	BlockDisposableAddresses *bool `json:"blockDisposableAddresses,omitempty"`
+	// Whether to block sub-addresses. (E.g., example+shopping@test.com)
+	BlockSubaddressing *bool `json:"blockSubaddressing,omitempty"`
+	// Custom blocklist of email addresses or domains.
+	CustomBlocklist []string `json:"customBlocklist,omitempty"`
+	// Cloud only.  Whether to block disposable email addresses. Once enabled, Logto will check the email domain against a list of known disposable email domains. If the domain is found in the list, the email address will be blocked.
+	BlockDisposableAddress any `json:"blockDisposableAddress,omitempty"`
+}
+
+func (o *EmailBlocklistPolicyRequest) GetBlockDisposableAddresses() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.BlockDisposableAddresses
+}
+
+func (o *EmailBlocklistPolicyRequest) GetBlockSubaddressing() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.BlockSubaddressing
+}
+
+func (o *EmailBlocklistPolicyRequest) GetCustomBlocklist() []string {
+	if o == nil {
+		return nil
+	}
+	return o.CustomBlocklist
+}
+
+func (o *EmailBlocklistPolicyRequest) GetBlockDisposableAddress() any {
+	if o == nil {
+		return nil
+	}
+	return o.BlockDisposableAddress
 }
 
 type UpdateSignInExpRequestBody struct {
@@ -1160,12 +1200,15 @@ type UpdateSignInExpRequestBody struct {
 	// Password policies to adjust the password strength requirements.
 	PasswordPolicy *PasswordPolicyRequest `json:"passwordPolicy,omitempty"`
 	// MFA settings
-	Mfa                 *MfaRequest            `json:"mfa,omitempty"`
-	SingleSignOnEnabled *bool                  `json:"singleSignOnEnabled,omitempty"`
-	CaptchaPolicy       *CaptchaPolicyRequest  `json:"captchaPolicy,omitempty"`
-	SentinelPolicy      *SentinelPolicyRequest `json:"sentinelPolicy,omitempty"`
-	TermsOfUseURL       *string                `json:"termsOfUseUrl,omitempty"`
-	PrivacyPolicyURL    *string                `json:"privacyPolicyUrl,omitempty"`
+	Mfa                 *MfaRequest           `json:"mfa,omitempty"`
+	SingleSignOnEnabled *bool                 `json:"singleSignOnEnabled,omitempty"`
+	CaptchaPolicy       *CaptchaPolicyRequest `json:"captchaPolicy,omitempty"`
+	// Custom sentinel policy settings. Use this field to customize the user lockout policy. The default value is 100 failed attempts within one hour. The user will be locked out for 60 minutes after exceeding the limit.
+	SentinelPolicy *SentinelPolicyRequest `json:"sentinelPolicy,omitempty"`
+	// Define email restriction policies. Users will be prohibited from registering or linking any email addresses that are included in the blocklist.
+	EmailBlocklistPolicy *EmailBlocklistPolicyRequest `json:"emailBlocklistPolicy,omitempty"`
+	TermsOfUseURL        *string                      `json:"termsOfUseUrl,omitempty"`
+	PrivacyPolicyURL     *string                      `json:"privacyPolicyUrl,omitempty"`
 	// The support email address to display on the error pages.
 	SupportEmail *string `json:"supportEmail,omitempty"`
 	// The support website URL to display on the error pages.
@@ -1298,6 +1341,13 @@ func (o *UpdateSignInExpRequestBody) GetSentinelPolicy() *SentinelPolicyRequest 
 		return nil
 	}
 	return o.SentinelPolicy
+}
+
+func (o *UpdateSignInExpRequestBody) GetEmailBlocklistPolicy() *EmailBlocklistPolicyRequest {
+	if o == nil {
+		return nil
+	}
+	return o.EmailBlocklistPolicy
 }
 
 func (o *UpdateSignInExpRequestBody) GetTermsOfUseURL() *string {
@@ -2473,32 +2523,60 @@ func (o *UpdateSignInExpSentinelPolicyResponse) GetLockoutDuration() *float64 {
 	return o.LockoutDuration
 }
 
+type UpdateSignInExpEmailBlocklistPolicyResponse struct {
+	BlockDisposableAddresses *bool    `json:"blockDisposableAddresses,omitempty"`
+	BlockSubaddressing       *bool    `json:"blockSubaddressing,omitempty"`
+	CustomBlocklist          []string `json:"customBlocklist,omitempty"`
+}
+
+func (o *UpdateSignInExpEmailBlocklistPolicyResponse) GetBlockDisposableAddresses() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.BlockDisposableAddresses
+}
+
+func (o *UpdateSignInExpEmailBlocklistPolicyResponse) GetBlockSubaddressing() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.BlockSubaddressing
+}
+
+func (o *UpdateSignInExpEmailBlocklistPolicyResponse) GetCustomBlocklist() []string {
+	if o == nil {
+		return nil
+	}
+	return o.CustomBlocklist
+}
+
 // UpdateSignInExpResponseBody - Updated default sign-in experience settings.
 type UpdateSignInExpResponseBody struct {
-	TenantID                     string                                    `json:"tenantId"`
-	ID                           string                                    `json:"id"`
-	Color                        UpdateSignInExpColorResponse              `json:"color"`
-	Branding                     UpdateSignInExpBrandingResponse           `json:"branding"`
-	LanguageInfo                 UpdateSignInExpLanguageInfoResponse       `json:"languageInfo"`
-	TermsOfUseURL                *string                                   `json:"termsOfUseUrl"`
-	PrivacyPolicyURL             *string                                   `json:"privacyPolicyUrl"`
-	AgreeToTermsPolicy           UpdateSignInExpAgreeToTermsPolicyResponse `json:"agreeToTermsPolicy"`
-	SignIn                       UpdateSignInExpSignInResponse             `json:"signIn"`
-	SignUp                       UpdateSignInExpSignUpResponse             `json:"signUp"`
-	SocialSignIn                 UpdateSignInExpSocialSignInResponse       `json:"socialSignIn"`
-	SocialSignInConnectorTargets []string                                  `json:"socialSignInConnectorTargets"`
-	SignInMode                   UpdateSignInExpSignInModeResponse         `json:"signInMode"`
-	CustomCSS                    *string                                   `json:"customCss"`
-	CustomContent                map[string]string                         `json:"customContent"`
-	CustomUIAssets               *UpdateSignInExpCustomUIAssetsResponse    `json:"customUiAssets"`
-	PasswordPolicy               UpdateSignInExpPasswordPolicyResponse     `json:"passwordPolicy"`
-	Mfa                          UpdateSignInExpMfaResponse                `json:"mfa"`
-	SingleSignOnEnabled          bool                                      `json:"singleSignOnEnabled"`
-	SupportEmail                 *string                                   `json:"supportEmail"`
-	SupportWebsiteURL            *string                                   `json:"supportWebsiteUrl"`
-	UnknownSessionRedirectURL    *string                                   `json:"unknownSessionRedirectUrl"`
-	CaptchaPolicy                UpdateSignInExpCaptchaPolicyResponse      `json:"captchaPolicy"`
-	SentinelPolicy               UpdateSignInExpSentinelPolicyResponse     `json:"sentinelPolicy"`
+	TenantID                     string                                      `json:"tenantId"`
+	ID                           string                                      `json:"id"`
+	Color                        UpdateSignInExpColorResponse                `json:"color"`
+	Branding                     UpdateSignInExpBrandingResponse             `json:"branding"`
+	LanguageInfo                 UpdateSignInExpLanguageInfoResponse         `json:"languageInfo"`
+	TermsOfUseURL                *string                                     `json:"termsOfUseUrl"`
+	PrivacyPolicyURL             *string                                     `json:"privacyPolicyUrl"`
+	AgreeToTermsPolicy           UpdateSignInExpAgreeToTermsPolicyResponse   `json:"agreeToTermsPolicy"`
+	SignIn                       UpdateSignInExpSignInResponse               `json:"signIn"`
+	SignUp                       UpdateSignInExpSignUpResponse               `json:"signUp"`
+	SocialSignIn                 UpdateSignInExpSocialSignInResponse         `json:"socialSignIn"`
+	SocialSignInConnectorTargets []string                                    `json:"socialSignInConnectorTargets"`
+	SignInMode                   UpdateSignInExpSignInModeResponse           `json:"signInMode"`
+	CustomCSS                    *string                                     `json:"customCss"`
+	CustomContent                map[string]string                           `json:"customContent"`
+	CustomUIAssets               *UpdateSignInExpCustomUIAssetsResponse      `json:"customUiAssets"`
+	PasswordPolicy               UpdateSignInExpPasswordPolicyResponse       `json:"passwordPolicy"`
+	Mfa                          UpdateSignInExpMfaResponse                  `json:"mfa"`
+	SingleSignOnEnabled          bool                                        `json:"singleSignOnEnabled"`
+	SupportEmail                 *string                                     `json:"supportEmail"`
+	SupportWebsiteURL            *string                                     `json:"supportWebsiteUrl"`
+	UnknownSessionRedirectURL    *string                                     `json:"unknownSessionRedirectUrl"`
+	CaptchaPolicy                UpdateSignInExpCaptchaPolicyResponse        `json:"captchaPolicy"`
+	SentinelPolicy               UpdateSignInExpSentinelPolicyResponse       `json:"sentinelPolicy"`
+	EmailBlocklistPolicy         UpdateSignInExpEmailBlocklistPolicyResponse `json:"emailBlocklistPolicy"`
 }
 
 func (o *UpdateSignInExpResponseBody) GetTenantID() string {
@@ -2667,6 +2745,13 @@ func (o *UpdateSignInExpResponseBody) GetSentinelPolicy() UpdateSignInExpSentine
 		return UpdateSignInExpSentinelPolicyResponse{}
 	}
 	return o.SentinelPolicy
+}
+
+func (o *UpdateSignInExpResponseBody) GetEmailBlocklistPolicy() UpdateSignInExpEmailBlocklistPolicyResponse {
+	if o == nil {
+		return UpdateSignInExpEmailBlocklistPolicyResponse{}
+	}
+	return o.EmailBlocklistPolicy
 }
 
 type UpdateSignInExpResponse struct {
