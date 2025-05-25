@@ -1,0 +1,36 @@
+speakeasyVersion: 1.551.0
+sources:
+    Logto API references:
+        sourceNamespace: logto-api-references
+        sourceRevisionDigest: sha256:be2ab038d898995732e3814932218a8f9d39ee90c5dd75340bdd431fd08aa7f8
+        sourceBlobDigest: sha256:3dff4f73ce22c675bbef4f51f278deb35f911ae726307eb583f4f6f73df96b52
+        tags:
+            - latest
+            - Cloud
+targets:
+    logto:
+        source: Logto API references
+        sourceNamespace: logto-api-references
+        sourceRevisionDigest: sha256:be2ab038d898995732e3814932218a8f9d39ee90c5dd75340bdd431fd08aa7f8
+        sourceBlobDigest: sha256:3dff4f73ce22c675bbef4f51f278deb35f911ae726307eb583f4f6f73df96b52
+        codeSamplesNamespace: logto-api-references-go-code-samples
+        codeSamplesRevisionDigest: sha256:abc43016bb0ba799bc7a2e1fdd0c9f5af5a29218a514e731ba13aa84d10bf721
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Logto API references:
+            inputs:
+                - location: ./schema.yaml
+            registry:
+                location: registry.speakeasyapi.dev/bizapp/rentavita/logto-api-references
+    targets:
+        logto:
+            target: go
+            source: Logto API references
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/bizapp/rentavita/logto-api-references-go-code-samples
+                labelOverride:
+                    fixedValue: Go (SDK)
+                blocking: false
