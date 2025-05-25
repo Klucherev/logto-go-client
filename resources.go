@@ -65,7 +65,7 @@ func (s *Resources) ListResources(ctx context.Context, includeScopes *string, pa
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListResources",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -277,7 +277,7 @@ func (s *Resources) CreateResource(ctx context.Context, request operations.Creat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateResource",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -498,7 +498,7 @@ func (s *Resources) GetResource(ctx context.Context, id string, opts ...operatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetResource",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -713,7 +713,7 @@ func (s *Resources) UpdateResource(ctx context.Context, id string, requestBody o
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateResource",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -934,7 +934,7 @@ func (s *Resources) DeleteResource(ctx context.Context, id string, opts ...opera
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteResource",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1131,7 +1131,7 @@ func (s *Resources) UpdateResourceIsDefault(ctx context.Context, id string, requ
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateResourceIsDefault",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1355,7 +1355,7 @@ func (s *Resources) ListResourceScopes(ctx context.Context, resourceID string, p
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListResourceScopes",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1572,7 +1572,7 @@ func (s *Resources) CreateResourceScope(ctx context.Context, resourceID string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateResourceScope",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1797,7 +1797,7 @@ func (s *Resources) UpdateResourceScope(ctx context.Context, resourceID string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateResourceScope",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2021,7 +2021,7 @@ func (s *Resources) DeleteResourceScope(ctx context.Context, resourceID string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteResourceScope",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

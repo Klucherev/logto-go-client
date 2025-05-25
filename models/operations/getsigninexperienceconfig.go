@@ -1147,33 +1147,6 @@ func (o *GetSignInExperienceConfigSentinelPolicy) GetLockoutDuration() *float64 
 	return o.LockoutDuration
 }
 
-type GetSignInExperienceConfigEmailBlocklistPolicy struct {
-	BlockDisposableAddresses *bool    `json:"blockDisposableAddresses,omitempty"`
-	BlockSubaddressing       *bool    `json:"blockSubaddressing,omitempty"`
-	CustomBlocklist          []string `json:"customBlocklist,omitempty"`
-}
-
-func (o *GetSignInExperienceConfigEmailBlocklistPolicy) GetBlockDisposableAddresses() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.BlockDisposableAddresses
-}
-
-func (o *GetSignInExperienceConfigEmailBlocklistPolicy) GetBlockSubaddressing() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.BlockSubaddressing
-}
-
-func (o *GetSignInExperienceConfigEmailBlocklistPolicy) GetCustomBlocklist() []string {
-	if o == nil {
-		return nil
-	}
-	return o.CustomBlocklist
-}
-
 // GetSignInExperienceConfigName - Validator function
 type GetSignInExperienceConfigName struct {
 }
@@ -1427,37 +1400,36 @@ func (o *GetSignInExperienceConfigCaptchaConfig) GetSiteKey() string {
 
 // GetSignInExperienceConfigResponseBody - The full sign-in experience configuration.
 type GetSignInExperienceConfigResponseBody struct {
-	TenantID                     string                                        `json:"tenantId"`
-	ID                           string                                        `json:"id"`
-	Color                        GetSignInExperienceConfigColor                `json:"color"`
-	Branding                     GetSignInExperienceConfigBranding             `json:"branding"`
-	LanguageInfo                 GetSignInExperienceConfigLanguageInfo         `json:"languageInfo"`
-	TermsOfUseURL                *string                                       `json:"termsOfUseUrl"`
-	PrivacyPolicyURL             *string                                       `json:"privacyPolicyUrl"`
-	AgreeToTermsPolicy           GetSignInExperienceConfigAgreeToTermsPolicy   `json:"agreeToTermsPolicy"`
-	SignIn                       GetSignInExperienceConfigSignIn               `json:"signIn"`
-	SignUp                       GetSignInExperienceConfigSignUp               `json:"signUp"`
-	SocialSignIn                 GetSignInExperienceConfigSocialSignIn         `json:"socialSignIn"`
-	SocialSignInConnectorTargets []string                                      `json:"socialSignInConnectorTargets"`
-	SignInMode                   GetSignInExperienceConfigSignInMode           `json:"signInMode"`
-	CustomCSS                    *string                                       `json:"customCss"`
-	CustomContent                map[string]string                             `json:"customContent"`
-	CustomUIAssets               *GetSignInExperienceConfigCustomUIAssets      `json:"customUiAssets"`
-	PasswordPolicy               GetSignInExperienceConfigPasswordPolicy       `json:"passwordPolicy"`
-	Mfa                          GetSignInExperienceConfigMfa                  `json:"mfa"`
-	SingleSignOnEnabled          bool                                          `json:"singleSignOnEnabled"`
-	SupportEmail                 *string                                       `json:"supportEmail"`
-	SupportWebsiteURL            *string                                       `json:"supportWebsiteUrl"`
-	UnknownSessionRedirectURL    *string                                       `json:"unknownSessionRedirectUrl"`
-	CaptchaPolicy                GetSignInExperienceConfigCaptchaPolicy        `json:"captchaPolicy"`
-	SentinelPolicy               GetSignInExperienceConfigSentinelPolicy       `json:"sentinelPolicy"`
-	EmailBlocklistPolicy         GetSignInExperienceConfigEmailBlocklistPolicy `json:"emailBlocklistPolicy"`
-	SocialConnectors             []GetSignInExperienceConfigSocialConnector    `json:"socialConnectors"`
-	SsoConnectors                []GetSignInExperienceConfigSsoConnector       `json:"ssoConnectors"`
-	ForgotPassword               GetSignInExperienceConfigForgotPassword       `json:"forgotPassword"`
-	IsDevelopmentTenant          bool                                          `json:"isDevelopmentTenant"`
-	GoogleOneTap                 *GetSignInExperienceConfigGoogleOneTap        `json:"googleOneTap,omitempty"`
-	CaptchaConfig                *GetSignInExperienceConfigCaptchaConfig       `json:"captchaConfig,omitempty"`
+	TenantID                     string                                      `json:"tenantId"`
+	ID                           string                                      `json:"id"`
+	Color                        GetSignInExperienceConfigColor              `json:"color"`
+	Branding                     GetSignInExperienceConfigBranding           `json:"branding"`
+	LanguageInfo                 GetSignInExperienceConfigLanguageInfo       `json:"languageInfo"`
+	TermsOfUseURL                *string                                     `json:"termsOfUseUrl"`
+	PrivacyPolicyURL             *string                                     `json:"privacyPolicyUrl"`
+	AgreeToTermsPolicy           GetSignInExperienceConfigAgreeToTermsPolicy `json:"agreeToTermsPolicy"`
+	SignIn                       GetSignInExperienceConfigSignIn             `json:"signIn"`
+	SignUp                       GetSignInExperienceConfigSignUp             `json:"signUp"`
+	SocialSignIn                 GetSignInExperienceConfigSocialSignIn       `json:"socialSignIn"`
+	SocialSignInConnectorTargets []string                                    `json:"socialSignInConnectorTargets"`
+	SignInMode                   GetSignInExperienceConfigSignInMode         `json:"signInMode"`
+	CustomCSS                    *string                                     `json:"customCss"`
+	CustomContent                map[string]string                           `json:"customContent"`
+	CustomUIAssets               *GetSignInExperienceConfigCustomUIAssets    `json:"customUiAssets"`
+	PasswordPolicy               GetSignInExperienceConfigPasswordPolicy     `json:"passwordPolicy"`
+	Mfa                          GetSignInExperienceConfigMfa                `json:"mfa"`
+	SingleSignOnEnabled          bool                                        `json:"singleSignOnEnabled"`
+	SupportEmail                 *string                                     `json:"supportEmail"`
+	SupportWebsiteURL            *string                                     `json:"supportWebsiteUrl"`
+	UnknownSessionRedirectURL    *string                                     `json:"unknownSessionRedirectUrl"`
+	CaptchaPolicy                GetSignInExperienceConfigCaptchaPolicy      `json:"captchaPolicy"`
+	SentinelPolicy               GetSignInExperienceConfigSentinelPolicy     `json:"sentinelPolicy"`
+	SocialConnectors             []GetSignInExperienceConfigSocialConnector  `json:"socialConnectors"`
+	SsoConnectors                []GetSignInExperienceConfigSsoConnector     `json:"ssoConnectors"`
+	ForgotPassword               GetSignInExperienceConfigForgotPassword     `json:"forgotPassword"`
+	IsDevelopmentTenant          bool                                        `json:"isDevelopmentTenant"`
+	GoogleOneTap                 *GetSignInExperienceConfigGoogleOneTap      `json:"googleOneTap,omitempty"`
+	CaptchaConfig                *GetSignInExperienceConfigCaptchaConfig     `json:"captchaConfig,omitempty"`
 }
 
 func (o *GetSignInExperienceConfigResponseBody) GetTenantID() string {
@@ -1626,13 +1598,6 @@ func (o *GetSignInExperienceConfigResponseBody) GetSentinelPolicy() GetSignInExp
 		return GetSignInExperienceConfigSentinelPolicy{}
 	}
 	return o.SentinelPolicy
-}
-
-func (o *GetSignInExperienceConfigResponseBody) GetEmailBlocklistPolicy() GetSignInExperienceConfigEmailBlocklistPolicy {
-	if o == nil {
-		return GetSignInExperienceConfigEmailBlocklistPolicy{}
-	}
-	return o.EmailBlocklistPolicy
 }
 
 func (o *GetSignInExperienceConfigResponseBody) GetSocialConnectors() []GetSignInExperienceConfigSocialConnector {

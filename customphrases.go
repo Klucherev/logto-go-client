@@ -59,7 +59,7 @@ func (s *CustomPhrases) ListCustomPhrases(ctx context.Context, opts ...operation
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListCustomPhrases",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -269,7 +269,7 @@ func (s *CustomPhrases) GetCustomPhrase(ctx context.Context, languageTag operati
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetCustomPhrase",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -484,7 +484,7 @@ func (s *CustomPhrases) ReplaceCustomPhrase(ctx context.Context, languageTag ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceCustomPhrase",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "TranslationObject", "json", `request:"mediaType=application/json"`)
@@ -705,7 +705,7 @@ func (s *CustomPhrases) DeleteCustomPhrase(ctx context.Context, languageTag oper
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteCustomPhrase",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

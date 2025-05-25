@@ -57,7 +57,7 @@ func (s *SubjectTokens) CreateSubjectToken(ctx context.Context, request operatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateSubjectToken",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)

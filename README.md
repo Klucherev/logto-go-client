@@ -18,8 +18,6 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *github.c
 ## Summary
 
 Logto API references: API references for Logto services.
-
-Note: The documentation is for Logto Cloud. If you are using Logto OSS, please refer to the response of `/api/swagger.json` endpoint on your Logto instance.
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -45,7 +43,7 @@ Note: The documentation is for Logto Cloud. If you are using Logto OSS, please r
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/Klucherev/logto-go-client
+go get github.com/klucherev/logto-go-client
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -734,7 +732,7 @@ func main() {
 	ctx := context.Background()
 
 	s := logtogoclient.New(
-		logtogoclient.WithServerURL("https://[tenant_id].logto.app/"),
+		logtogoclient.WithServerURL("https://auth.rentavita.com"),
 		logtogoclient.WithSecurity(components.Security{
 			ClientID:     logtogoclient.String(os.Getenv("LOGTO_CLIENT_ID")),
 			ClientSecret: logtogoclient.String(os.Getenv("LOGTO_CLIENT_SECRET")),

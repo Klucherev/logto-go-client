@@ -1139,45 +1139,6 @@ func (o *GetSignInExpSentinelPolicy) GetLockoutDuration() *float64 {
 	return o.LockoutDuration
 }
 
-// GetSignInExpEmailBlocklistPolicy - Define email restriction policies. Users will be prohibited from registering or linking any email addresses that are included in the blocklist.
-type GetSignInExpEmailBlocklistPolicy struct {
-	BlockDisposableAddresses *bool `json:"blockDisposableAddresses,omitempty"`
-	// Whether to block sub-addresses. (E.g., example+shopping@test.com)
-	BlockSubaddressing *bool `json:"blockSubaddressing,omitempty"`
-	// Custom blocklist of email addresses or domains.
-	CustomBlocklist []string `json:"customBlocklist,omitempty"`
-	// Cloud only.  Whether to block disposable email addresses. Once enabled, Logto will check the email domain against a list of known disposable email domains. If the domain is found in the list, the email address will be blocked.
-	BlockDisposableAddress any `json:"blockDisposableAddress,omitempty"`
-}
-
-func (o *GetSignInExpEmailBlocklistPolicy) GetBlockDisposableAddresses() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.BlockDisposableAddresses
-}
-
-func (o *GetSignInExpEmailBlocklistPolicy) GetBlockSubaddressing() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.BlockSubaddressing
-}
-
-func (o *GetSignInExpEmailBlocklistPolicy) GetCustomBlocklist() []string {
-	if o == nil {
-		return nil
-	}
-	return o.CustomBlocklist
-}
-
-func (o *GetSignInExpEmailBlocklistPolicy) GetBlockDisposableAddress() any {
-	if o == nil {
-		return nil
-	}
-	return o.BlockDisposableAddress
-}
-
 // GetSignInExpResponseBody - Default sign-in experience settings.
 type GetSignInExpResponseBody struct {
 	TenantID string `json:"tenantId"`
@@ -1216,8 +1177,6 @@ type GetSignInExpResponseBody struct {
 	CaptchaPolicy             GetSignInExpCaptchaPolicy `json:"captchaPolicy"`
 	// Custom sentinel policy settings. Use this field to customize the user lockout policy. The default value is 100 failed attempts within one hour. The user will be locked out for 60 minutes after exceeding the limit.
 	SentinelPolicy GetSignInExpSentinelPolicy `json:"sentinelPolicy"`
-	// Define email restriction policies. Users will be prohibited from registering or linking any email addresses that are included in the blocklist.
-	EmailBlocklistPolicy GetSignInExpEmailBlocklistPolicy `json:"emailBlocklistPolicy"`
 }
 
 func (o *GetSignInExpResponseBody) GetTenantID() string {
@@ -1386,13 +1345,6 @@ func (o *GetSignInExpResponseBody) GetSentinelPolicy() GetSignInExpSentinelPolic
 		return GetSignInExpSentinelPolicy{}
 	}
 	return o.SentinelPolicy
-}
-
-func (o *GetSignInExpResponseBody) GetEmailBlocklistPolicy() GetSignInExpEmailBlocklistPolicy {
-	if o == nil {
-		return GetSignInExpEmailBlocklistPolicy{}
-	}
-	return o.EmailBlocklistPolicy
 }
 
 type GetSignInExpResponse struct {

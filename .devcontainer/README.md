@@ -1,9 +1,4 @@
 
-<div align="center">
-    <a href="https://codespaces.new/Klucherev/logto-go-client.git/tree/main"><img src="https://github.com/codespaces/badge.svg" /></a>
-</div>
-<br>
-
 > **Remember to shutdown a GitHub Codespace when it is not in use!**
 
 # Dev Containers Quick Start
@@ -25,11 +20,11 @@ The speakeasy CLI allows you to generate more usage snippets. Here's how:
 - To generate a sample for a specific operation by providing an operation ID, use:
 
 ```
-speakeasy generate usage -s https://logto.rentavita.com/api/swagger.json -l go -i {INPUT_OPERATION_ID} -o ./samples
+speakeasy generate usage -s ./swagger.json -l go -i {INPUT_OPERATION_ID} -o ./samples
 ```
 
 - To generate samples for an entire namespace (like a tag or group name), use:
 
 ```
-speakeasy generate usage -s https://logto.rentavita.com/api/swagger.json -l go -n {INPUT_TAG_NAME} -o ./samples
+speakeasy generate usage -s ./swagger.json -l go -n {INPUT_TAG_NAME} -o ./samples
 ```

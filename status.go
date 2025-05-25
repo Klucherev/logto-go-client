@@ -59,7 +59,7 @@ func (s *Status) GetStatus(ctx context.Context, opts ...operations.Option) (*ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetStatus",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: nil,
 	}
 

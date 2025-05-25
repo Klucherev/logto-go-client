@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 1ee1175a-c236-426f-b2a4-8cec8b67827f
 management:
-  docChecksum: 236b0da5f6a68e18bed18435e2e90491
+  docChecksum: 47cadf50e09f4a729553389456b03299
   docVersion: Cloud
   speakeasyVersion: 1.551.0
   generationVersion: 2.610.0
-  releaseVersion: 0.0.5
-  configChecksum: e9e1a3600476d7b4dede3ae163dc3427
+  releaseVersion: 0.0.6
+  configChecksum: cb6928a987647b287ae7f099cc01c453
 features:
   go:
     acceptHeaders: 2.81.2
@@ -820,7 +820,6 @@ generatedFiles:
   - docs/models/operations/deleteuserrolerequest.md
   - docs/models/operations/deleteuserroleresponse.md
   - docs/models/operations/developmenttenantmigrationnotificationrequest.md
-  - docs/models/operations/emailblocklistpolicyrequest.md
   - docs/models/operations/emailrequest.md
   - docs/models/operations/experienceverifywebauthnauthenticationverificationresponse.md
   - docs/models/operations/experienceverifywebauthnregistrationverificationresponse.md
@@ -1050,7 +1049,6 @@ generatedFiles:
   - docs/models/operations/getsigninexpcharactertypes.md
   - docs/models/operations/getsigninexpcolor.md
   - docs/models/operations/getsigninexpcustomuiassets.md
-  - docs/models/operations/getsigninexpemailblocklistpolicy.md
   - docs/models/operations/getsigninexperienceconfigagreetotermspolicy.md
   - docs/models/operations/getsigninexperienceconfigbranding.md
   - docs/models/operations/getsigninexperienceconfigcaptchaconfig.md
@@ -1058,7 +1056,6 @@ generatedFiles:
   - docs/models/operations/getsigninexperienceconfigcharactertypes.md
   - docs/models/operations/getsigninexperienceconfigcolor.md
   - docs/models/operations/getsigninexperienceconfigcustomuiassets.md
-  - docs/models/operations/getsigninexperienceconfigemailblocklistpolicy.md
   - docs/models/operations/getsigninexperienceconfigfactor.md
   - docs/models/operations/getsigninexperienceconfigfallbacklanguage.md
   - docs/models/operations/getsigninexperienceconfigforgotpassword.md
@@ -1151,7 +1148,6 @@ generatedFiles:
   - docs/models/operations/getwellknownexperiencecharactertypes.md
   - docs/models/operations/getwellknownexperiencecolor.md
   - docs/models/operations/getwellknownexperiencecustomuiassets.md
-  - docs/models/operations/getwellknownexperienceemailblocklistpolicy.md
   - docs/models/operations/getwellknownexperiencefactor.md
   - docs/models/operations/getwellknownexperiencefallbacklanguage.md
   - docs/models/operations/getwellknownexperienceforgotpassword.md
@@ -1995,7 +1991,6 @@ generatedFiles:
   - docs/models/operations/updatesigninexpcolorrequest.md
   - docs/models/operations/updatesigninexpcolorresponse.md
   - docs/models/operations/updatesigninexpcustomuiassetsresponse.md
-  - docs/models/operations/updatesigninexpemailblocklistpolicyresponse.md
   - docs/models/operations/updatesigninexpfactorresponse.md
   - docs/models/operations/updatesigninexpfallbacklanguageresponse.md
   - docs/models/operations/updatesigninexpidentifieremailorphoneresponse.md
@@ -2772,14 +2767,14 @@ examples:
     speakeasy-default-get-sign-in-exp:
       responses:
         "200":
-          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": false, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": false, "fallbackLanguage": "ar"}, "termsOfUseUrl": null, "privacyPolicyUrl": "https://rich-community.name", "agreeToTermsPolicy": "Automatic", "signIn": {"methods": [{"identifier": "email", "password": false, "verificationCode": false, "isPasswordPrimary": false}]}, "signUp": {"identifiers": ["email", "username", "phone"], "password": false, "verify": true}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>"], "signInMode": "SignIn", "customCss": "<value>", "customContent": {"key": "<value>", "key1": "<value>"}, "customUiAssets": {"id": "<id>", "createdAt": 5247.58}, "passwordPolicy": {}, "mfa": {"factors": ["WebAuthn"], "policy": "PromptOnlyAtSignIn"}, "singleSignOnEnabled": true, "supportEmail": "<value>", "supportWebsiteUrl": "https://growing-seagull.org", "unknownSessionRedirectUrl": "https://upset-muscat.org", "captchaPolicy": {}, "sentinelPolicy": {}, "emailBlocklistPolicy": {}}
+          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": false, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": false, "fallbackLanguage": "ar"}, "termsOfUseUrl": null, "privacyPolicyUrl": "https://rich-community.name", "agreeToTermsPolicy": "Automatic", "signIn": {"methods": [{"identifier": "email", "password": false, "verificationCode": false, "isPasswordPrimary": false}]}, "signUp": {"identifiers": ["email", "username", "phone"], "password": false, "verify": true}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>"], "signInMode": "SignIn", "customCss": "<value>", "customContent": {"key": "<value>", "key1": "<value>"}, "customUiAssets": {"id": "<id>", "createdAt": 5247.58}, "passwordPolicy": {}, "mfa": {"factors": ["WebAuthn"], "policy": "PromptOnlyAtSignIn"}, "singleSignOnEnabled": true, "supportEmail": "<value>", "supportWebsiteUrl": "https://growing-seagull.org", "unknownSessionRedirectUrl": "https://upset-muscat.org", "captchaPolicy": {}, "sentinelPolicy": {}}
   UpdateSignInExp:
     speakeasy-default-update-sign-in-exp:
       requestBody:
         application/json: {}
       responses:
         "200":
-          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": false, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": false, "fallbackLanguage": "bg-BG"}, "termsOfUseUrl": "https://pessimistic-glider.com/", "privacyPolicyUrl": "https://competent-digestive.com", "agreeToTermsPolicy": "Manual", "signIn": {"methods": []}, "signUp": {"identifiers": [], "password": false, "verify": false}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>"], "signInMode": "Register", "customCss": "<value>", "customContent": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "customUiAssets": {"id": "<id>", "createdAt": 9363.45}, "passwordPolicy": {}, "mfa": {"factors": ["WebAuthn"], "policy": "PromptOnlyAtSignIn"}, "singleSignOnEnabled": true, "supportEmail": "<value>", "supportWebsiteUrl": "https://shameful-traditionalism.org", "unknownSessionRedirectUrl": "https://quick-witted-plugin.biz/", "captchaPolicy": {}, "sentinelPolicy": {}, "emailBlocklistPolicy": {}}
+          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": false, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": false, "fallbackLanguage": "bg-BG"}, "termsOfUseUrl": "https://pessimistic-glider.com/", "privacyPolicyUrl": "https://competent-digestive.com", "agreeToTermsPolicy": "Manual", "signIn": {"methods": []}, "signUp": {"identifiers": [], "password": false, "verify": false}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>"], "signInMode": "Register", "customCss": "<value>", "customContent": {"key": "<value>", "key1": "<value>", "key2": "<value>"}, "customUiAssets": {"id": "<id>", "createdAt": 9363.45}, "passwordPolicy": {}, "mfa": {"factors": ["WebAuthn"], "policy": "PromptOnlyAtSignIn"}, "singleSignOnEnabled": true, "supportEmail": "<value>", "supportWebsiteUrl": "https://shameful-traditionalism.org", "unknownSessionRedirectUrl": "https://quick-witted-plugin.biz/", "captchaPolicy": {}, "sentinelPolicy": {}}
   CheckPasswordWithDefaultSignInExperience:
     speakeasy-default-check-password-with-default-sign-in-experience:
       requestBody:
@@ -4040,7 +4035,7 @@ examples:
     speakeasy-default-get-sign-in-experience-config:
       responses:
         "200":
-          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": true, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": false, "fallbackLanguage": "lv-LV"}, "termsOfUseUrl": "https://strident-t-shirt.name/", "privacyPolicyUrl": "https://early-hygienic.com", "agreeToTermsPolicy": "Automatic", "signIn": {"methods": [{"identifier": "phone", "password": false, "verificationCode": true, "isPasswordPrimary": false}]}, "signUp": {"identifiers": ["username", "phone"], "password": true, "verify": false}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>", "<value 2>"], "signInMode": "SignInAndRegister", "customCss": "<value>", "customContent": {"key": "<value>", "key1": "<value>"}, "customUiAssets": {"id": "<id>", "createdAt": 1597.61}, "passwordPolicy": {}, "mfa": {"factors": ["Totp"], "policy": "PromptAtSignInAndSignUp"}, "singleSignOnEnabled": false, "supportEmail": "<value>", "supportWebsiteUrl": "https://muffled-digit.com", "unknownSessionRedirectUrl": "https://proud-secrecy.info/", "captchaPolicy": {}, "sentinelPolicy": {}, "emailBlocklistPolicy": {}, "socialConnectors": [{"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Universal"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Universal"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Universal"}], "ssoConnectors": [{"id": "<id>", "connectorName": "<value>", "logo": "<value>"}], "forgotPassword": {"phone": true, "email": true}, "isDevelopmentTenant": false}
+          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": true, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": false, "fallbackLanguage": "lv-LV"}, "termsOfUseUrl": "https://strident-t-shirt.name/", "privacyPolicyUrl": "https://early-hygienic.com", "agreeToTermsPolicy": "Automatic", "signIn": {"methods": [{"identifier": "phone", "password": false, "verificationCode": true, "isPasswordPrimary": false}]}, "signUp": {"identifiers": ["username", "phone"], "password": true, "verify": false}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>", "<value 2>"], "signInMode": "SignInAndRegister", "customCss": "<value>", "customContent": {"key": "<value>", "key1": "<value>"}, "customUiAssets": {"id": "<id>", "createdAt": 1597.61}, "passwordPolicy": {}, "mfa": {"factors": ["Totp"], "policy": "PromptAtSignInAndSignUp"}, "singleSignOnEnabled": false, "supportEmail": "<value>", "supportWebsiteUrl": "https://muffled-digit.com", "unknownSessionRedirectUrl": "https://proud-secrecy.info/", "captchaPolicy": {}, "sentinelPolicy": {}, "socialConnectors": [{"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Universal"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Universal"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Universal"}], "ssoConnectors": [{"id": "<id>", "connectorName": "<value>", "logo": "<value>"}], "forgotPassword": {"phone": true, "email": true}, "isDevelopmentTenant": false}
   GetSignInExperiencePhrases:
     speakeasy-default-get-sign-in-experience-phrases:
       responses:
@@ -4050,7 +4045,7 @@ examples:
     speakeasy-default-get-well-known-experience:
       responses:
         "200":
-          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": true, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": true, "fallbackLanguage": "ro-RO"}, "termsOfUseUrl": "https://great-almighty.name", "privacyPolicyUrl": null, "agreeToTermsPolicy": "Manual", "signIn": {"methods": []}, "signUp": {"identifiers": [], "password": true, "verify": true}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>", "<value 2>", "<value 3>"], "signInMode": "Register", "customCss": null, "customContent": {}, "customUiAssets": {"id": "<id>", "createdAt": 2550.38}, "passwordPolicy": {}, "mfa": {"factors": [], "policy": "PromptAtSignInAndSignUp"}, "singleSignOnEnabled": true, "supportEmail": "<value>", "supportWebsiteUrl": null, "unknownSessionRedirectUrl": "https://snoopy-overcoat.info/", "captchaPolicy": {}, "sentinelPolicy": {}, "emailBlocklistPolicy": {}, "socialConnectors": [{"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Web"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Web"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Web"}], "ssoConnectors": [{"id": "<id>", "connectorName": "<value>", "logo": "<value>"}], "forgotPassword": {"phone": false, "email": false}, "isDevelopmentTenant": false}
+          application/json: {"tenantId": "<id>", "id": "<id>", "color": {"primaryColor": "<value>", "isDarkModeEnabled": true, "darkPrimaryColor": "<value>"}, "branding": {}, "languageInfo": {"autoDetect": true, "fallbackLanguage": "ro-RO"}, "termsOfUseUrl": "https://great-almighty.name", "privacyPolicyUrl": null, "agreeToTermsPolicy": "Manual", "signIn": {"methods": []}, "signUp": {"identifiers": [], "password": true, "verify": true}, "socialSignIn": {}, "socialSignInConnectorTargets": ["<value 1>", "<value 2>", "<value 3>"], "signInMode": "Register", "customCss": null, "customContent": {}, "customUiAssets": {"id": "<id>", "createdAt": 2550.38}, "passwordPolicy": {}, "mfa": {"factors": [], "policy": "PromptAtSignInAndSignUp"}, "singleSignOnEnabled": true, "supportEmail": "<value>", "supportWebsiteUrl": null, "unknownSessionRedirectUrl": "https://snoopy-overcoat.info/", "captchaPolicy": {}, "sentinelPolicy": {}, "socialConnectors": [{"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Web"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Web"}, {"id": "<id>", "target": "<value>", "name": {}, "logo": "<value>", "logoDark": "<value>", "platform": "Web"}], "ssoConnectors": [{"id": "<id>", "connectorName": "<value>", "logo": "<value>"}], "forgotPassword": {"phone": false, "email": false}, "isDevelopmentTenant": false}
   GetWellKnownManagementOpenapiJson: {}
   GetWellKnownExperienceOpenapiJson: {}
   GetWellKnownUserOpenapiJson: {}

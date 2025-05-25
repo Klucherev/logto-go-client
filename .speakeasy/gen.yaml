@@ -2,7 +2,7 @@ configVersion: 2.0.0
 generation:
   devContainers:
     enabled: true
-    schemaPath: https://logto.rentavita.com/api/swagger.json
+    schemaPath: ./swagger.json
   sdkClassName: Logto
   maintainOpenAPIOrder: true
   usageSnippets:
@@ -17,10 +17,10 @@ generation:
     sharedErrorComponentsApr2025: true
   auth:
     oAuth2ClientCredentialsEnabled: true
-    oAuth2PasswordEnabled: true
+    oAuth2PasswordEnabled: false
   sdkHooksConfigAccess: true
 go:
-  version: 0.0.5
+  version: 0.0.6
   additionalDependencies: {}
   allowUnknownFieldsInWeakUnions: false
   clientServerStatusCodesAsErrors: true

@@ -63,7 +63,7 @@ func (s *OrganizationRoles) GetOrganizationRole(ctx context.Context, id string, 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetOrganizationRole",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -278,7 +278,7 @@ func (s *OrganizationRoles) UpdateOrganizationRole(ctx context.Context, id strin
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateOrganizationRole",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -501,7 +501,7 @@ func (s *OrganizationRoles) DeleteOrganizationRole(ctx context.Context, id strin
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteOrganizationRole",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -697,7 +697,7 @@ func (s *OrganizationRoles) ListOrganizationRoles(ctx context.Context, q *string
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListOrganizationRoles",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -909,7 +909,7 @@ func (s *OrganizationRoles) CreateOrganizationRole(ctx context.Context, request 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateOrganizationRole",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -1132,7 +1132,7 @@ func (s *OrganizationRoles) ListOrganizationRoleScopes(ctx context.Context, id s
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListOrganizationRoleScopes",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1351,7 +1351,7 @@ func (s *OrganizationRoles) CreateOrganizationRoleScope(ctx context.Context, id 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateOrganizationRoleScope",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1553,7 +1553,7 @@ func (s *OrganizationRoles) ReplaceOrganizationRoleScopes(ctx context.Context, i
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceOrganizationRoleScopes",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -1755,7 +1755,7 @@ func (s *OrganizationRoles) DeleteOrganizationRoleScope(ctx context.Context, id 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteOrganizationRoleScope",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -1951,7 +1951,7 @@ func (s *OrganizationRoles) ListOrganizationRoleResourceScopes(ctx context.Conte
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListOrganizationRoleResourceScopes",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -2170,7 +2170,7 @@ func (s *OrganizationRoles) CreateOrganizationRoleResourceScope(ctx context.Cont
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateOrganizationRoleResourceScope",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2372,7 +2372,7 @@ func (s *OrganizationRoles) ReplaceOrganizationRoleResourceScopes(ctx context.Co
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ReplaceOrganizationRoleResourceScopes",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)
@@ -2574,7 +2574,7 @@ func (s *OrganizationRoles) DeleteOrganizationRoleResourceScope(ctx context.Cont
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteOrganizationRoleResourceScope",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

@@ -59,7 +59,7 @@ func (s *SSOConnectors) CreateSsoConnector(ctx context.Context, request operatio
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateSsoConnector",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "Request", "json", `request:"mediaType=application/json"`)
@@ -283,7 +283,7 @@ func (s *SSOConnectors) ListSsoConnectors(ctx context.Context, page *int64, page
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "ListSsoConnectors",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -497,7 +497,7 @@ func (s *SSOConnectors) GetSsoConnector(ctx context.Context, id string, opts ...
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSsoConnector",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -711,7 +711,7 @@ func (s *SSOConnectors) DeleteSsoConnector(ctx context.Context, id string, opts 
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "DeleteSsoConnector",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -906,7 +906,7 @@ func (s *SSOConnectors) UpdateSsoConnector(ctx context.Context, id string, reque
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "UpdateSsoConnector",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

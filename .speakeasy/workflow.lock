@@ -2,8 +2,8 @@ speakeasyVersion: 1.551.0
 sources:
     Logto API references:
         sourceNamespace: logto-api-references
-        sourceRevisionDigest: sha256:be2ab038d898995732e3814932218a8f9d39ee90c5dd75340bdd431fd08aa7f8
-        sourceBlobDigest: sha256:3dff4f73ce22c675bbef4f51f278deb35f911ae726307eb583f4f6f73df96b52
+        sourceRevisionDigest: sha256:cbb9383e7fa52ce8c48a7e9db11d405529a7e7b69a5f177b52d24618d9b4312a
+        sourceBlobDigest: sha256:8233a4403e6487c006d1855a45264bdd16e4129ad0236938a1cb97453bb59ecc
         tags:
             - latest
             - Cloud
@@ -11,17 +11,17 @@ targets:
     logto:
         source: Logto API references
         sourceNamespace: logto-api-references
-        sourceRevisionDigest: sha256:be2ab038d898995732e3814932218a8f9d39ee90c5dd75340bdd431fd08aa7f8
-        sourceBlobDigest: sha256:3dff4f73ce22c675bbef4f51f278deb35f911ae726307eb583f4f6f73df96b52
+        sourceRevisionDigest: sha256:cbb9383e7fa52ce8c48a7e9db11d405529a7e7b69a5f177b52d24618d9b4312a
+        sourceBlobDigest: sha256:8233a4403e6487c006d1855a45264bdd16e4129ad0236938a1cb97453bb59ecc
         codeSamplesNamespace: logto-api-references-go-code-samples
-        codeSamplesRevisionDigest: sha256:abc43016bb0ba799bc7a2e1fdd0c9f5af5a29218a514e731ba13aa84d10bf721
+        codeSamplesRevisionDigest: sha256:5f74154faa18a1d016d6168a93b68a2f17cc34e7a7b48449b0688fe4be63b40c
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Logto API references:
             inputs:
-                - location: ./schema.yaml
+                - location: ./swagger.json
             registry:
                 location: registry.speakeasyapi.dev/bizapp/rentavita/logto-api-references
     targets:

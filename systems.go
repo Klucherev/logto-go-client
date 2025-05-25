@@ -57,7 +57,7 @@ func (s *Systems) GetSystemApplicationConfig(ctx context.Context, opts ...operat
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSystemApplicationConfig",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 

@@ -55,7 +55,7 @@ func (s *SAMLApplicationsAuthFlow) GetSamlAuthn(ctx context.Context, request ope
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetSamlAuthn",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -251,7 +251,7 @@ func (s *SAMLApplicationsAuthFlow) CreateSamlAuthn(ctx context.Context, id strin
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateSamlAuthn",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "RequestBody", "json", `request:"mediaType=application/json"`)

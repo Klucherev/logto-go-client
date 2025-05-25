@@ -57,7 +57,7 @@ func (s *UserAssets) GetUserAssetServiceStatus(ctx context.Context, opts ...oper
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "GetUserAssetServiceStatus",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
@@ -263,7 +263,7 @@ func (s *UserAssets) CreateUserAsset(ctx context.Context, request *operations.Cr
 		BaseURL:        baseURL,
 		Context:        ctx,
 		OperationID:    "CreateUserAsset",
-		OAuth2Scopes:   []string{},
+		OAuth2Scopes:   []string{"all"},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, true, "Request", "multipart", `request:"mediaType=multipart/form-data"`)

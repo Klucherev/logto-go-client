@@ -16,7 +16,7 @@ import (
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
 	// Logto endpoint address.
-	"https://[tenant_id].logto.app/",
+	"https://auth.rentavita.com",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -69,8 +69,6 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 }
 
 // Logto API references: API references for Logto services.
-//
-// Note: The documentation is for Logto Cloud. If you are using Logto OSS, please refer to the response of `/api/swagger.json` endpoint on your Logto instance.
 type Logto struct {
 	// Application represents your registered software program or service that has been authorized to access user information and perform actions on behalf of users within the system. Currently, Logto supports four types of applications:
 	//
@@ -254,9 +252,9 @@ func New(opts ...SDKOption) *Logto {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "Cloud",
-			SDKVersion:        "0.0.5",
+			SDKVersion:        "0.0.6",
 			GenVersion:        "2.610.0",
-			UserAgent:         "speakeasy-sdk/go 0.0.5 2.610.0 Cloud github.com/klucherev/logto-go-client",
+			UserAgent:         "speakeasy-sdk/go 0.0.6 2.610.0 Cloud github.com/klucherev/logto-go-client",
 			Hooks:             hooks.New(),
 		},
 	}

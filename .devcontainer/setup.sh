@@ -12,4 +12,4 @@ go mod download
 go mod tidy
 
 # Generate starter usage sample with speakeasy
-speakeasy generate usage -s https://logto.rentavita.com/api/swagger.json -l go -o samples/root.go
+speakeasy generate usage -s ./swagger.json -l go -o samples/root.go
