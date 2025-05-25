@@ -45,7 +45,7 @@ Note: The documentation is for Logto Cloud. If you are using Logto OSS, please r
 
 To add the SDK as a dependency to your project:
 ```bash
-go get github.com/klucherev/logto-go-client
+go get github.com/Klucherev/logto-go-client
 ```
 <!-- End SDK Installation [installation] -->
 
